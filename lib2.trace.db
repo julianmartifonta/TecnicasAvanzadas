@@ -1,0 +1,12 @@
+2023-11-18 13:02:00.136937-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" not found (this database is empty); SQL statement:
+SELECT * FROM usuario WHERE nombreusuario = 'a' and password = 'a' [42104-224]
+2023-11-18 13:02:00.178825-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" not found (this database is empty); SQL statement:
+SELECT * FROM usuario WHERE nombreusuario = 'a' and password = 'a' [42104-224]
+2023-11-18 13:03:03.136798-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" not found (this database is empty); SQL statement:
+SELECT * FROM usuario WHERE nombreusuario = 'a' and password = 's' [42104-224]
+2023-11-18 13:03:03.193682-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" not found (this database is empty); SQL statement:
+SELECT * FROM usuario WHERE nombreusuario = 'a' and password = 's' [42104-224]

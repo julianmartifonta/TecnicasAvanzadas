@@ -1,0 +1,67 @@
+06-06 16:51:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "CREATE TABLE IF NOT EXISTS MEDICO
+(
+NOMBRE VARCHAR(30) NOT NULL,
+APELLIDO VARCHAR(50) NOT NULL,
+DNI INT NOT NULL,
+ESPECIALIDAD VARCHAR(30)
+OBRASOCIAL[*] VARCHAR(20)
+PRECIOCONSULTA INT NOT NULL,
+SALDOBANCARIO INT NOT NULL,
+PRIMARY KEY(ID_PERSONA)
+) "; se esperaba "FOR, UNSIGNED, NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS MEDICO
+(
+NOMBRE VARCHAR(30) NOT NULL,
+APELLIDO VARCHAR(50) NOT NULL,
+DNI INT NOT NULL,
+ESPECIALIDAD VARCHAR(30)
+OBRASOCIAL[*] VARCHAR(20)
+PRECIOCONSULTA INT NOT NULL,
+SALDOBANCARIO INT NOT NULL,
+PRIMARY KEY(ID_PERSONA)
+) "; expected "FOR, UNSIGNED, NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS medico
+(
+nombre VARCHAR(30) NOT NULL,
+apellido VARCHAR(50) NOT NULL,
+dni INT NOT NULL,
+especialidad VARCHAR(30)
+obraSocial VARCHAR(20)
+precioConsulta INT NOT NULL,
+saldoBancario INT NOT NULL,
+PRIMARY KEY(id_persona)
+) [42001-176]
+06-06 16:52:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Columna "ID_PERSONA" no encontrada
+Column "ID_PERSONA" not found; SQL statement:
+CREATE TABLE IF NOT EXISTS medico
+(
+nombre VARCHAR(30) NOT NULL,
+apellido VARCHAR(50) NOT NULL,
+dni INT NOT NULL,
+especialidad VARCHAR(30) NOT NULL,
+obraSocial VARCHAR(20) NOT NULL,
+precioConsulta INT NOT NULL,
+saldoBancario INT NOT NULL,
+PRIMARY KEY(id_persona)
+) [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.table.Table.getColumn(Table.java:637)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:75)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:108)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:73)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:170)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:186)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1391)
+	at org.h2.server.web.WebApp.query(WebApp.java:1064)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1026)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1013)
+	at org.h2.server.web.WebThread.process(WebThread.java:168)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
